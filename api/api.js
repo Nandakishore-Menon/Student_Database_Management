@@ -5,6 +5,7 @@ const Student = require('./student.js');
 // all students
 router.get('/', function(req, res, next){
     Student.find().then(function(student){
+        console.log(student);
         res.send(student);
     }).catch(next);
 });

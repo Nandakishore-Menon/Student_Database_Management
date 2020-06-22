@@ -12,6 +12,11 @@ mongoose.Promise = global.Promise;
 // json
 app.use(bodyParser.json());
 
+// CORS fix
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 // routes
 app.use('/api', require('./api')); 
 
