@@ -10,6 +10,10 @@ const StudentSchema = new Schema({
         type: String,
         required: [true, 'Name field is required']
     },
+    gender: {
+        type: String,
+        required: [true, 'Gender field is required']
+    },
     class: {
         type: String,
         required: [true, 'Class field is required']

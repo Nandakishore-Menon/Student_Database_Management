@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add student to database</title>
+</head>
+<body>
+	<form id="studentForm" method="post">
+		<label for="reg_id">Registration ID:</label><br>
+		<input type="number" id="reg_id" name="reg_id" required><br>
+
+		<label for="Sname">Name:</label><br>
+		<input type="text" id="Sname" name="name" required><br>
+
+		<label for="gender">Gender:</label><br>
+		<select id="gender" name="gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+			<option value="Other">Other</option>
+		</select><br>
+
+		<label for="Sclass">Class:</label><br>
+		<input type="text" id="Sclass" name="class" required><br>
+
+		<label for="roll_no">Roll number:</label><br>
+		<input type="number" id="roll_no" name="roll_no" required><br>
+
+		<label for="dob">Date of birth:</label><br>
+		<input type="date" id="dob" name="dob"><br>
+
+		<label for="father">Father's name:</label><br>
+		<input type="text" id="father" name="father"><br>
+
+		<label for="mother">Mother's name:</label><br>
+		<input type="text" id="mother" name="mother"><br>
+
+		<label for="ph_no">Phone number:</label><br>
+		<input type="tel" id="ph_no" name="ph_no" maxlength="10"><br>
+
+		<input type="submit" name="" value="Submit">
+	</form>
+	<script type="text/javascript" src="add.js"></script>
+</body>
+</html>
