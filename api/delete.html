@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search student to be deleted in database</title>
+</head>
+<body>
+	<form id="searchForm" method="delete">
+		<label for="filter">Filter: </label>
+		<select id="filter" name="filter">
+			<option value="reg_id">Registration id</option>
+			<option value="name">Name</option>
+			<option value="roll_no">Roll number</option>
+			<option value="class">Class</option>
+		</select><br><br>
+		<label for="field">Enter field:</label>
+		<input id="field" type="" name="field"><br><br>
+		<input type="submit" name="" value="Delete">
+	</form>
+	<div id="data"></div>
+	<script type="text/javascript" src="delete.js"></script>
+</body>
+</html>
