@@ -40,7 +40,7 @@ router.get('/class/:id', function(req, res, next){
 });
 
 // add student
-router.post('/stu/', function(req, res, next){
+router.post('/', function(req, res, next){
     Student.create(req.body).then(function(student){
         res.send(student);
     }).catch(next);
