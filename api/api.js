@@ -40,7 +40,7 @@ router.get('/class/:id', function(req, res, next){
 });
 
 // add student
-router.post('/', function(req, res, next){
+router.post('/stu/', function(req, res, next){
     Student.create(req.body).then(function(student){
         res.send(student);
     }).catch(next);
@@ -61,5 +61,6 @@ router.delete('/reg_id/:id', function(req, res, next){
         res.send(student);
     });
 });
+
 
 module.exports = router;
