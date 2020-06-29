@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/uistyles.css">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div id="right" class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Add Student</h1>
+                    <input type="number" placeholder="Registration number" required />
+                    <input type="text" placeholder="Name" required/>
+                    <select id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" id="sclass" placeholder="Class" name="class" required>
+                    <input type="number" id="roll_no" placeholder="Roll number" name="roll_no" required>
+                    <button>Add</button>
+                </form>
+            </div>
+            <div id="left" class="form-container sign-in-container">
+                <form action="#">
+                    <h1>View Student</h1>
+                    <input type="number" placeholder="Registration number" />
+                    <button>Search</button>
+                    <button id ="viewAll">View All</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Looking for someone?</h1>
+                        <p>To view existing students, search here, or view all.</p>
+                        <button class="ghost" id="GoBack">Go back</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hola!</h1>
+                        <p>Enter student details, and add him/her to the database</p>
+                        <button class="ghost" id="Add">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+        <script src="./js/viewall.js"></script>
+    </body>
+</html>
