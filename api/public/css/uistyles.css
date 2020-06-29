@@ -82,6 +82,16 @@ form {
     height: 100%;
     text-align: center;
 }
+div.form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
 
 input {
     background-color: #eee;
@@ -245,5 +255,5 @@ button.del{
 }
 
 #stadd{
-    color:linear-gradient(to bottom, #ffffff, #0053AC9F);
+    color:#00539CFF;
 }

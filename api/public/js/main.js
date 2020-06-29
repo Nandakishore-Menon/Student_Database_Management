@@ -23,12 +23,12 @@ signUpButton.addEventListener('click', () => {
 
 signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
-    document.getElementsByClassName('left')[0].innerHTML=`<form action="#">
+    document.getElementsByClassName('left')[0].innerHTML=`                    <div class="form" action="#">
                         <h1>View Student</h1>
                         <input type="number" placeholder="Registration number" />
                         <button>Search</button>
                         <button id ="viewAll">View All</button>
-                    </form>`;
+                    </div>`;
     const but = document.getElementById("viewAll");
     but.addEventListener("click", View);
 });

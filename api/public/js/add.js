@@ -54,7 +54,7 @@ var Add = function(){
     addbut.addEventListener("click", function(event){
         if(regbool==true){
             loadPage();
-            document.getElementsByClassName('left')[0].innerHTML=`<h1>Student added.</h1>`;
+            document.getElementsByClassName('right')[0].innerHTML=`<div class="form"><h1 id="stadd">Student added.</h1></div>`;
             return true;
         }
         else{
