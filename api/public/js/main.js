@@ -18,15 +18,17 @@ signUpButton.addEventListener('click', () => {
                     <input type="number" id="roll_no" placeholder="Roll number" name="roll_no" required>
                     <button id="addBut">Add</button>
                 </form>`;
+    Add();
 });
 
 signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
-    //document.getElementsByClassName('left')[0].innerHTML="";
     document.getElementsByClassName('left')[0].innerHTML=`<form action="#">
                         <h1>View Student</h1>
                         <input type="number" placeholder="Registration number" />
                         <button>Search</button>
                         <button id ="viewAll">View All</button>
                     </form>`;
+    const but = document.getElementById("viewAll");
+    but.addEventListener("click", View);
 });
