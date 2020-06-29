@@ -13,9 +13,9 @@ http.onreadystatechange = function(){
 			st="";
 			//document.getElementById("left").innerHTML += `<div class="stu box">`;
 			st+= `<div class="stu box"><section class="field name col-lg-3"> ${arr[i].name} </section>`;
-			st+= `<section class="field class col-lg-3"> ${arr[i].class} </section>`;
-			st+= `<section class="field roll_no col-lg-3"> ${arr[i].roll_no} </section>`;
-			st+=`<button class="del">Delete</button></div>`;
+			st+= `<section class="field col-lg-3"> ${arr[i].class} </section>`;
+			st+= `<section class="field col-lg-3"> ${arr[i].roll_no} </section>`;
+			st+= `<button class="del">Delete</button></div>`;
 			//document.getElementById("left").innerHTML += `<td> ${arr[i].dob} </td>`;
 			//document.getElementById("left").innerHTML += `</div>`;
 			document.getElementById("left").innerHTML+=st;

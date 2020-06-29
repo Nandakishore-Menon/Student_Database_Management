@@ -50,6 +50,7 @@ button {
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
+    margin:5px;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -209,8 +210,8 @@ input {
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
-.left{
-    overflow-y: auto;
+#left{
+    overflow-y: scroll;
     overflow-x:hidden;
 }
 .stu{
@@ -236,7 +237,7 @@ button.del{
     color: #FFFFFF;
     font-size: 8px;
     font-weight: bold;
-    padding: 12px 20px;
+    padding: 10px 15px;
     letter-spacing: 1px;
     transition: transform 80ms ease-in;
 }
