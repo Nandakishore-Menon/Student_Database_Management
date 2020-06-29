@@ -9,7 +9,8 @@
     <body>
         <div class="container" id="container">
             <div class="right form-container sign-up-container">
-                <form id="initialForm">
+                <iframe name="dest"></iframe>
+                <form id="initialForm" target="dest">
                     <h1>Add Student</h1>
                     <input type="number" name="reg_id" id="reg_id" placeholder="Registration number" required />
                     <input type="text" name="name" placeholder="Name" required/>
@@ -22,6 +23,7 @@
                     <input type="number" id="roll_no" placeholder="Roll number" name="roll_no" required>
                     <button id="addBut">Add</button>
                 </form>
+
             </div>
             <div class="left form-container sign-in-container">
                     <form action="#">

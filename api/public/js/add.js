@@ -24,7 +24,7 @@ function loadPage(){
         //add.status=204;
         add.send(obj);
 
-        //document.getElementById('righttext').innerHTML = `Student Added`;
+        //document.getElementsByClassName('right')[0].innerHTML = `<h1>Student Added</h1>`;
     
 
 };
@@ -54,6 +54,7 @@ const addbut = document.getElementById("addBut");
 addbut.addEventListener("click", function(event){
     if(regbool==true){
         loadPage();
+        document.getElementsByClassName('left')[0].innerHTML=`<h1>Student added.</h1>`;
         return true;
     }
     else{
