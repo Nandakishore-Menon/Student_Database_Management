@@ -1,33 +1,34 @@
-var http = new XMLHttpRequest();
 function loadPage(reg){
     var h = new XMLHttpRequest();
     h.onload = function(){
-    document.getElementById('bform').innerHTML = this.responseText;
+    document.getElementById('Body').innerHTML = this.responseText;
     document.getElementById('reg_id').value = reg;
     function sendData() {
         var elements = form.elements;
         var obj ={};
         for(var i = 0 ; i < elements.length-1 ; i++){
             var item = elements.item(i);
-            if(item.type == "number" || item.type == "tel"){
-                obj[item.name] = Number(item.value);
-            }
-            else{
-                obj[item.name] = item.value;
+            if(item.value){
+                if(item.type == "number" || item.type == "tel"){
+                    obj[item.name] = Number(item.value);
+                }
+                else{
+                    obj[item.name] = item.value;
+                }
             }
         }
         obj = JSON.stringify(obj);
-            
+        console.log(obj);
         var http = new XMLHttpRequest();
             
         http.addEventListener("error", function(event){
             alert("error");
         });
     
-        http.open('POST', "http://localhost:4000/api/", true);
+        http.open('PUT', `http://localhost:4000/api/reg_id/${reg}`, true);
         http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         http.send(obj);
-        document.getElementById('bform').innerText = "Student added";
+        document.getElementById('Body').innerText = "Student data updated";
     }
     const form = document.getElementById("studentForm");
     form.addEventListener("submit", function(event){
@@ -35,20 +36,24 @@ function loadPage(reg){
         sendData();
     });
     }
-    h.open('GET', 'add.html');
+    h.open('GET', 'update.html');
     h.send();
 }
 
+
+var http = new XMLHttpRequest();
 http.onreadystatechange = function(){
     if (this.readyState == 4 && this.status == 200){
         var obj = JSON.parse(this.responseText);
         if(obj.length != 0){
             console.log("reg id present");
-            document.getElementById('data').textContent = `Student with resgistration number ${obj[0].reg_id} is already present in database. Try another registration number.`
+            loadPage(reg_id.value);
         }
         else{
             console.log("reg id not present");
-            loadPage(reg_id.value);
+            document.getElementById('data').textContent = 
+            `Student with resgistration number ${reg_id.value} is not present in database.
+            Try another registration number.`;
         }
     }
 }
