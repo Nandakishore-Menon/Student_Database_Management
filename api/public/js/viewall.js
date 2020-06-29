@@ -7,7 +7,9 @@ var http = new XMLHttpRequest();
 http.onreadystatechange = function(){
 	if (this.readyState == 4 && this.status == 200){
 		var arr = JSON.parse(this.responseText);
+		document.getElementsByClassName('left')[0].setAttribute("id","left");
 		document.getElementById("left").innerHTML="";
+
 		var st="";
 		for (var i = 0; i<arr.length; i++){
 			st="";

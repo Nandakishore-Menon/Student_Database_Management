@@ -8,11 +8,11 @@
 
     <body>
         <div class="container" id="container">
-            <div id="right" class="form-container sign-up-container">
-                <form action="#">
+            <div class="right form-container sign-up-container">
+                <form id="initialForm">
                     <h1>Add Student</h1>
-                    <input type="number" placeholder="Registration number" required />
-                    <input type="text" placeholder="Name" required/>
+                    <input type="number" name="reg_id" id="reg_id" placeholder="Registration number" required />
+                    <input type="text" name="name" placeholder="Name" required/>
                     <select id="gender" name="gender">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -20,16 +20,16 @@
                     </select>
                     <input type="text" id="sclass" placeholder="Class" name="class" required>
                     <input type="number" id="roll_no" placeholder="Roll number" name="roll_no" required>
-                    <button>Add</button>
+                    <button id="addBut">Add</button>
                 </form>
             </div>
-            <div id="left" class="form-container sign-in-container">
-                <form action="#">
-                    <h1>View Student</h1>
-                    <input type="number" placeholder="Registration number" />
-                    <button>Search</button>
-                    <button id ="viewAll">View All</button>
-                </form>
+            <div class="left form-container sign-in-container">
+                    <form action="#">
+                        <h1>View Student</h1>
+                        <input type="number" placeholder="Registration number" />
+                        <button>Search</button>
+                        <button id ="viewAll">View All</button>
+                    </form>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
@@ -39,7 +39,7 @@
                         <button class="ghost" id="GoBack">Go back</button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <h1>Hola!</h1>
+                        <h1 id ="righttext">Hola!</h1>
                         <p>Enter student details, and add him/her to the database</p>
                         <button class="ghost" id="Add">Add</button>
                     </div>
@@ -48,5 +48,6 @@
         </div>
         <script src="./js/main.js"></script>
         <script src="./js/viewall.js"></script>
+        <script src="./js/add.js"></script>
     </body>
 </html>

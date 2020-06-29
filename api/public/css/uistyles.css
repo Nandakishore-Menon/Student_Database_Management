@@ -241,3 +241,7 @@ button.del{
     letter-spacing: 1px;
     transition: transform 80ms ease-in;
 }
+
+#stadd{
+    color:linear-gradient(to bottom, #ffffff, #0053AC9F);
+}
