@@ -39,6 +39,66 @@ var View = function(event){
 					}
 				});
 			});
+			const u = document.getElementsByClassName("upd");
+			Array.from(u).forEach(function(item, i){
+				item.addEventListener('click', function(event){
+					var student = document.querySelector(`#left div:nth-child(${i+1})`);
+					var name = student.querySelector('.name').textContent;
+					
+					document.getElementsByClassName('left')[0].innerHTML=`<iframe name="dest2"></iframe>
+                <form id="updForm" target="dest2">
+                    <h1>Add Student</h1>
+                    <input type="text" name="name" value="" placeholder="Name"/>
+                    <select id="gender" name="gender" value="">
+                    	<option value=""></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" id="sclass" value="" placeholder="Class" name="class">
+                    <input type="number" id="roll_no" value="" placeholder="Roll number" name="roll_no">
+                    <button id="updBut">Update</button>
+                </form>`;
+                document.getElementById('updBut').addEventListener('click',function(event){
+                	var confirmation = confirm(`Are you sure you want to update ${name} in database?`);
+                	var form = document.getElementById("updForm");
+                	var elements = form.elements;
+		            var json ={};
+		            for(var i = 0 ; i < elements.length-1 ; i++){
+
+		                var item = elements.item(i);
+		                if(item.value!="")
+		                {
+		                	console.log(item.name);
+		                	if(item.type == "number" || item.type == "tel"){
+		                    json[item.name] = Number(item.value);
+		                }
+		                else{
+		                    json[item.name] = item.value;
+		                }
+		            }
+		            };
+		            json=JSON.stringify(json);
+		            console.log(json);
+					if(confirmation == true)
+					{
+						var reg = Number(student.querySelector('#reg_id').textContent);
+						var updateRequest = new XMLHttpRequest();
+						updateRequest.onreadystatechange = function(){
+							if (this.readyState == 4 && this.status == 200){
+								alert(`${name} updated database`);
+							}
+						}
+						updateRequest.open('PUT', `http://localhost:4000/api/reg_id/${reg}`, true);
+						updateRequest.setRequestHeader('Content-type','application/json; charset=utf-8');
+						updateRequest.send(json);
+						alert("Updated");
+					}
+				});
+			});
+			});
+
+
 		}
 	}
 	http.open("GET", "http://localhost:4000/api/", true);
