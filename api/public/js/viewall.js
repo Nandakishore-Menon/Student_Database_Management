@@ -14,7 +14,7 @@ var View = function(event){
 				st+= `<div class="stu box"><section class="field name col-lg-3"> ${arr[i].name} </section>`;
 				st+= `<section class="field col-lg-3"> ${arr[i].class} </section>`;
 				st+= `<section class="field col-lg-3" id="reg_id"> ${arr[i].reg_id} </section>`;
-				st+= `<button class="del">Delete</button></div>`;
+				st+= `<button class="del">Delete</button><button class="upd">Update</button></div>`;
 				document.getElementById("left").innerHTML+=st;
 
 			}

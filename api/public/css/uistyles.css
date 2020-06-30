@@ -229,7 +229,8 @@ input {
 .stu{
     padding:20px 15px;
     margin:10px 10px;
-    
+    position: relative;
+    height:20%;
 }
 .box{
     border:1px solid black;
@@ -242,7 +243,7 @@ input {
     clear:right bottom;
     overflow-wrap: break-word;
 }
-button.del{
+.del{
     border-radius: 20px;
     border: 1px solid #00A4CCFF;
     background-color: #00A4CCFF;
@@ -252,8 +253,25 @@ button.del{
     padding: 10px 15px;
     letter-spacing: 1px;
     transition: transform 80ms ease-in;
-}
+    position:absolute;
+    top:2px;
+    right:6px;
 
+}
+.upd{
+    border-radius: 20px;
+    border: 1px solid #00A4CCFF;
+    background-color: #00A4CCFF;
+    color: #FFFFFF;
+    font-size: 8px;
+    font-weight: bold;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    position:absolute;
+    bottom:2px;
+    right:6px;
+}
 #stadd{
     color:#00539CFF;
 }
