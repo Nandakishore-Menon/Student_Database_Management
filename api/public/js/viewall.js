@@ -100,9 +100,6 @@ var View = function(event){
 		if (this.readyState == 4 && this.status == 200){
 			var arr = JSON.parse(this.responseText);
 			display(arr);
-			
-
-
 		}
 	}
 	http.open("GET", "http://localhost:4000/api/", true);

@@ -26,14 +26,12 @@ signInButton.addEventListener('click', () => {
     document.getElementsByClassName('left')[0].innerHTML=
                 `<div class="form" action="#">
                     <h1>View Student</h1>
-                    <input type="number" name="reg_id" id="reg_id" placeholder="Registration number" />
+                    <input type="number" name="reg_id" id="Reg_id" placeholder="Registration number" />
                     <span>OR</span>
-                    <input type="text" name="name" id="name" placeholder="Name" />
+                    <input type="text" name="name" id="Name" placeholder="Name" />
                     <button id="Search">Search</button>
                     <button id="viewAll">View All</button>
                 </div>`;
-    //const search = document.getElementById("Search");
-    //search.addEventListener("click", Search);
     Search();
     const view = document.getElementById("viewAll");
     view.addEventListener("click", View);
