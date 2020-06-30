@@ -1,3 +1,4 @@
+/*
 var http = new XMLHttpRequest();
 
 http.onreadystatechange = function(){
@@ -16,3 +17,9 @@ form.addEventListener("submit", function(event){
     http.open("GET", `http://localhost:4000/api/${filter}/${field}`, true);
     http.send();
 });
+*/
+var Search = function(event){
+    console.log("search");
+}
+const search = document.getElementById("Search");
+search.addEventListener("click", Search);
