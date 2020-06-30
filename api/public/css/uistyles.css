@@ -230,7 +230,7 @@ input {
     padding:20px 15px;
     margin:10px 10px;
     position: relative;
-    height:20%;
+    /*height:20%;*/
 }
 .box{
     border:1px solid black;
@@ -239,9 +239,9 @@ input {
     width: 25%;
 }
 .field{
-    float:left;
-    clear:right bottom;
     overflow-wrap: break-word;
+    font-size: 110%;
+    font-weight: 500; 
 }
 .del{
     border-radius: 20px;
@@ -274,4 +274,10 @@ input {
 }
 #stadd{
     color:#00539CFF;
+}
+span{
+    font-size: 100%;
+}
+span.title{
+    font-weight: 600;
 }

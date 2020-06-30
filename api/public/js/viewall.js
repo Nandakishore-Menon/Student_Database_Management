@@ -11,9 +11,10 @@ var View = function(event){
 			var st="";
 			for (var i = 0; i<arr.length; i++){
 				st="";
-				st+= `<div class="stu box"><section class="field name col-lg-3"> ${arr[i].name} </section>`;
-				st+= `<section class="field col-lg-3"> ${arr[i].class} </section>`;
-				st+= `<section class="field col-lg-3" id="reg_id"> ${arr[i].reg_id} </section>`;
+				st+= `<div class="stu box"><section class="field"><span class="title">Name:&nbsp;&nbsp;</span> <spanclass="name">${arr[i].name}</span> </section>`;
+				st+= `<section class="field" ><span class="title">Class:&nbsp;&nbsp;</span><span id="cl">${arr[i].class}</span> </section>`;
+				st+= `<section class="field" ><span class="title">Reg_id:&nbsp;&nbsp;</span><span id="reg_id">${arr[i].reg_id}</span> </section>`;
+				st+= `<section class="field"><span class="title">Roll_no:&nbsp;&nbsp;</span><span id="roll_no">${arr[i].roll_no}</span> </section>`;
 				st+= `<button class="del">Delete</button><button class="upd">Update</button></div>`;
 				document.getElementById("left").innerHTML+=st;
 
@@ -45,18 +46,26 @@ var View = function(event){
 					var student = document.querySelector(`#left div:nth-child(${i+1})`);
 					var name = student.querySelector('.name').textContent;
 					
+
+
+
+
+
+
+					var cl=student.querySelector('#cl').textContent;
+					var roll=student.querySelector('#roll_no').textContent;
 					document.getElementsByClassName('left')[0].innerHTML=`<iframe name="dest2"></iframe>
                 <form id="updForm" target="dest2">
                     <h1>Add Student</h1>
-                    <input type="text" name="name" value="" placeholder="Name"/>
+                    <input type="text" name="name" value="" placeholder="${name}"/>
                     <select id="gender" name="gender" value="">
                     	<option value=""></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
                     </select>
-                    <input type="text" id="sclass" value="" placeholder="Class" name="class">
-                    <input type="number" id="roll_no" value="" placeholder="Roll number" name="roll_no">
+                    <input type="text" id="sclass" value="" placeholder="${cl}" name="class">
+                    <input type="number" id="roll_no" value="" placeholder="${roll}" name="roll_no">
                     <button id="updBut">Update</button>
                 </form>`;
                 document.getElementById('updBut').addEventListener('click',function(event){
