@@ -1,21 +1,44 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Student database management system</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
-	<div id="heading">
-		<h1>Student database management system</h1>
-	</div>
-	
-	
-	<ul id="functionalities">
-		<li><a href="viewall.html" onclick="sendajax()"> View data of all students </a></li>
-		<li><a href="./search.html"> Search student in database </a></li>
-		<li><a href="./initialadd.html"> Add student to database </a></li>
-		<li><a href="./initialupdate.html"> Update student data </a></li>
-		<li><a href="./delete.html"> Delete student data from database </a></li>
-	</ul>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/uistyles.css">
+        <title>Student database management system</title>
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="right form-container sign-up-container">
+            </div>
+            <div class="left form-container sign-in-container">
+                    <div class="form" action="#">
+                        <h1>View Student</h1>
+                        <input type="number" name="reg_id" id="Reg_id" placeholder="Registration number" />
+                        <span>OR</span>
+                        <input type="text" name="name" id="Name" placeholder="Name" />
+                        <button id="Search">Search</button>
+                        <button id="viewAll">View All</button>
+                    </div>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Looking for someone?</h1>
+                        <p>To view existing students, search here, or view all.</p>
+                        <button class="ghost" id="GoBack">Go back</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1 id ="righttext">Hola!</h1>
+                        <p>Enter student details, and add him/her to the database</p>
+                        <button class="ghost" id="Add">Add</button>
+                        <a href="./index.html"><button class="ghost" id="home">Home</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+        <script src="./js/search.js"></script>
+        <script src="./js/viewall.js"></script>
+        <script src="./js/add.js"></script>
+    </body>
 </html>

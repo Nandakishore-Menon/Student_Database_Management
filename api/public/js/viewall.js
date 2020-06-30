@@ -5,9 +5,11 @@ var display = function(arr){
 	var st="";
 	for (var i = 0; i<arr.length; i++){
 		st="";
-		st+= `<div class="stu box"><section class="field"><span class="title">Name:&nbsp;&nbsp;</span> <span class="name">${arr[i].name}</span> </section>`;
-		st+= `<section class="field" ><span class="title">Class:&nbsp;&nbsp;</span><span id="cl">${arr[i].class}</span> </section>`;
+		st+= `<div class="stu box">`;
 		st+= `<section class="field" ><span class="title">Reg_id:&nbsp;&nbsp;</span><span id="reg_id">${arr[i].reg_id}</span> </section>`;
+		st+= `<section class="field"><span class="title">Name:&nbsp;&nbsp;</span> <span class="name">${arr[i].name}</span> </section>`;
+		st+= `<section class="field" ><span class="title">Gender:&nbsp;&nbsp;</span><span id="gender">${arr[i].gender}</span> </section>`;
+		st+= `<section class="field" ><span class="title">Class:&nbsp;&nbsp;</span><span id="cl">${arr[i].class}</span> </section>`;
 		st+= `<section class="field"><span class="title">Roll_no:&nbsp;&nbsp;</span><span id="roll_no">${arr[i].roll_no}</span> </section>`;
 		st+= `<button class="del">Delete</button><button class="upd">Update</button></div>`;
 		document.getElementById("left").innerHTML+=st;
