@@ -250,11 +250,11 @@ input {
     color: #FFFFFF;
     font-size: 8px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 10px 20px;
     letter-spacing: 1px;
     transition: transform 80ms ease-in;
     position:absolute;
-    top:2px;
+    top:15px;
     right:6px;
 
 }
@@ -265,11 +265,11 @@ input {
     color: #FFFFFF;
     font-size: 8px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 10px 20px;
     letter-spacing: 1px;
     transition: transform 80ms ease-in;
     position:absolute;
-    bottom:2px;
+    bottom:15px;
     right:6px;
 }
 #stadd{
