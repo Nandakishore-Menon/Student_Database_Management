@@ -15,4 +15,5 @@ form.addEventListener("submit", function(event){
     console.log(filter);
     http.open("DELETE", `http://localhost:4000/api/${filter}/${field}`, true);
     http.send();
+    document.getElementsByClassName('left')[0].innerHTML=`<div class="form"><h1 id="stadd">Student deleted.</h1></div>`;
 });
