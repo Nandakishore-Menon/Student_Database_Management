@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: linear-gradient(to bottom right, #f0cdce, #f0cdce,#f0cdce,#104a6f);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,9 +45,9 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #35FFCE;
-    background-color: #35FFCE;
-    color: #FFFFFF;
+    border: 1px solid #f0cdce;
+    background-color: #104a6f;
+    color: #f0cdce;
     font-size: 12px;
     font-weight: bold;
     margin:5px;
@@ -68,8 +68,9 @@ button:focus {
 }
 
 button.ghost {
-    background-color: transparent;
-    border-color: #FFFFFF;
+    background-color: #f0cdce;
+    border-color: #13263f;
+    color: #13263f;
 }
 
 form {
@@ -172,9 +173,9 @@ input {
 }
 
 .overlay {
-    background: #008080;
-    background: -webkit-linear-gradient(to right, #35FFCE, #008080);
-    background: linear-gradient(to right, #35FFCE, #008080);
+    background: #13263f;
+    background: -webkit-linear-gradient(to right, #182f4a, #13263f);
+    background: linear-gradient(to right, #182f4a, #13263f);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -245,9 +246,9 @@ input {
 }
 .del{
     border-radius: 20px;
-    border: 1px solid #35FFCE;
-    background-color: #35FFCE;
-    color: #FFFFFF;
+    border: 1px solid #f0cdce;
+    background-color: #104a6f;
+    color: #f0cdce;
     font-size: 8px;
     font-weight: bold;
     padding: 10px 20px;
@@ -260,9 +261,9 @@ input {
 }
 .upd{
     border-radius: 20px;
-    border: 1px solid #35FFCE;
-    background-color: #35FFCE;
-    color: #FFFFFF;
+    border: 1px solid #f0cdce;
+    background-color: #104a6f;
+    color: #f0cdce;
     font-size: 8px;
     font-weight: bold;
     padding: 10px 20px;
@@ -273,7 +274,7 @@ input {
     right:6px;
 }
 #stadd{
-    color:#008080;
+    color:#13263f;
 }
 span{
     font-size: 100%;
