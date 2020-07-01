@@ -285,6 +285,9 @@ span{
 span.title{
     font-weight: 600;
 }
+.hidden{
+    display: none;
+}
 
 @media screen and (min-width: 768px) and (max-width: 860px){
     .container{
@@ -318,7 +321,15 @@ span.title{
         left:35%;
         top:40px;
     }
-
+    .hidden{
+        display: block;
+    }
+    #Addid{
+        border-radius: 20px;
+        border: 1px solid #104a6f;
+        background-color: #104a6f;
+        color: #f0cdce;
+    }
 }
 
 
