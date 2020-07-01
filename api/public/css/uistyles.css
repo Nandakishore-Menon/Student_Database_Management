@@ -259,7 +259,7 @@ input {
     right:6px;
 
 }
-.homehid{
+#homehid{
     display:none;
 }
 .upd{
@@ -312,9 +312,11 @@ span.title{
     .overlay{
         display:none;
     }
-    .homehid{
+    #homehid{
         display:block;
-
+        position: relative;
+        left:35%;
+        top:40px;
     }
 
 }
