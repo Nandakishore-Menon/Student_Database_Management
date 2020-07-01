@@ -28,7 +28,7 @@ function loadPage(reg){
         http.open('PUT', `http://localhost:4000/api/reg_id/${reg}`, true);
         http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         http.send(obj);
-        document.getElementById('Body').innerText = "Student data updated";
+        document.getElementsByClassName('left')[0].innerHTML=`<div class="form"><h1 id="stadd">Student updated.</h1></div>`;
     }
     const form = document.getElementById("studentForm");
     form.addEventListener("submit", function(event){

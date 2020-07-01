@@ -26,7 +26,8 @@ var display = function(arr){
 				var deleteRequest = new XMLHttpRequest();
 				deleteRequest.onreadystatechange = function(){
 					if (this.readyState == 4 && this.status == 200){
-						alert(`${name} deleted from database`);
+						//alert(`${name} deleted from database`);
+						document.getElementsByClassName('left')[0].innerHTML=`<div class="form"><h1 id="stadd">${name}'s data has been deleted.</h1></div>`;
 					}
 				}
 				deleteRequest.open('DELETE', `http://localhost:4000/api/reg_id/${reg}`, true);
@@ -82,13 +83,15 @@ var display = function(arr){
 					var updateRequest = new XMLHttpRequest();
 					updateRequest.onreadystatechange = function(){
 						if (this.readyState == 4 && this.status == 200){
-							alert(`${name} updated database`);
+							//alert(`${name} updated database`);
+							document.getElementsByClassName('left')[0].innerHTML=`<div class="form"><h1 id="stadd">${name}'s data has been updated.</h1></div>`;
 						}
 					}
 					updateRequest.open('PUT', `http://localhost:4000/api/reg_id/${reg}`, true);
 					updateRequest.setRequestHeader('Content-type','application/json; charset=utf-8');
 					updateRequest.send(json);
-					alert("Updated");
+					//alert("Updated");
+
 				}
 			});
 		});

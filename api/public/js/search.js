@@ -25,7 +25,16 @@ var Search = function(){
         http.onreadystatechange = function(){
             if (this.readyState == 4 && this.status == 200){
                 var arr = JSON.parse(this.responseText);
-                display(arr);
+                //console.log(arr);
+                if(arr.length!=0){
+                    
+                    //console.log(arr.length);
+                    display(arr);
+                }
+                else{
+
+                    document.getElementsByClassName('left')[0].innerHTML=`<div class="form"><h1 id="stadd">Student not found.</h1></div>`;
+                }
                 }
             }
         
