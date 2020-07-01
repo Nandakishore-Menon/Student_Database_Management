@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #ffffff, #0053AC9F);
+    background: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,8 +45,8 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #00A4CCFF;
-    background-color: #00A4CCFF;
+    border: 1px solid #35FFCE;
+    background-color: #35FFCE;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -172,9 +172,9 @@ input {
 }
 
 .overlay {
-    background: #00539CFF;
-    background: -webkit-linear-gradient(to right, #00A4CCFF, #00539CFF);
-    background: linear-gradient(to right, #00A4CCFF, #00539CFF);
+    background: #008080;
+    background: -webkit-linear-gradient(to right, #35FFCE, #008080);
+    background: linear-gradient(to right, #35FFCE, #008080);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -245,8 +245,8 @@ input {
 }
 .del{
     border-radius: 20px;
-    border: 1px solid #00A4CCFF;
-    background-color: #00A4CCFF;
+    border: 1px solid #35FFCE;
+    background-color: #35FFCE;
     color: #FFFFFF;
     font-size: 8px;
     font-weight: bold;
@@ -260,8 +260,8 @@ input {
 }
 .upd{
     border-radius: 20px;
-    border: 1px solid #00A4CCFF;
-    background-color: #00A4CCFF;
+    border: 1px solid #35FFCE;
+    background-color: #35FFCE;
     color: #FFFFFF;
     font-size: 8px;
     font-weight: bold;
@@ -273,7 +273,7 @@ input {
     right:6px;
 }
 #stadd{
-    color:#00539CFF;
+    color:#008080;
 }
 span{
     font-size: 100%;
