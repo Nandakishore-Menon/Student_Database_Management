@@ -3,7 +3,7 @@
 ## How to use:
 * Install dependencies
   * `npm install`
-* Run mondodb
+* Run mongodb
 * Run index.js
   * `node index.js`
 
